@@ -42,6 +42,7 @@ markdown_extensions:
       permalink: true
 
 repo_url: https://github.com/thehedgefrog/intro-to-git
+repo_name: thehedgefrog/intro-to-git
 
 extra:
   generator: true

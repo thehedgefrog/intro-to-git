@@ -2,7 +2,7 @@ name: site_ci
 on:
   push:
     branches:
-      - publish
+      - main
 
 jobs:
   deploy:
