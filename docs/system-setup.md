@@ -38,12 +38,12 @@ Git needs to be installed on your system.  This can be done by command line, on 
     [Install Git for Windows](https://git-scm.com/download/win)
 
 === ":material-apple: macOS"
-    ``` sh
+    ``` shell
     git --version
     ```
 
 === ":material-ubuntu: WSL - Ubuntu"
-    ``` sh
+    ``` shell
     sudo apt install git-all
     ```
 
@@ -55,11 +55,11 @@ Git needs to be installed on your system.  This can be done by command line, on 
     [Install GPG4Win](https://gnupg.org/download/)
 
 === ":material-apple: macOS"
-    ``` sh
+    ``` shell
     brew install gpg
     ```
     On macOS, you might also want to install a graphical pinentry application with brew install pinentry-mac, then add this line to ~/.gnupg/gpg-agent.conf (if the file doesn’t exist, create it):
-    ```
+    ``` title="gpg-agent.conf"
     pinentry-program /usr/local/bin/pinentry-mac
     ```
 
@@ -70,13 +70,13 @@ Git needs to be installed on your system.  This can be done by command line, on 
 
 ### Additional configuration for Linux and macOS
 On Linux and macOS, you can enable the GPG agent to avoid having to type the secret key’s password every time. To do that, add this line to ~/.gnupg/gpg.conf (if the file doesn’t exist, create it):
-``` sh
+``` shell title="gpg.conf"
 # Enable gpg to use the gpg-agent
 use-agent
 ```
 
 You will also need to add these two lines to your profile file (~/.bashrc, ~/.bash_profile, ~/.zprofile, or wherever appropriate), then re-launch your shell (or run source ~/.bashrc or similar):
-``` sh
+``` shell
 export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 ```
